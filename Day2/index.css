@@ -1,0 +1,225 @@
+/* Winter Wonderland Color Palette */
+:root {
+  --color-white: #ffffff;
+  --color-ice-blue: #a8d8e6;
+  --color-soft-gray: #b2c2c6;
+  --color-medium-blue: #4b8da3;
+  --color-dark-navy: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1b2b44 0%, #2e4a6d 50%, #1b2b44 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Add subtle animated snow effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 50% 50%,
+      transparent 0,
+      rgba(255, 255, 255, 0.05) 2px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 30% 30%,
+      transparent 0,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 3px
+    );
+  background-size: 100px 100px, 60px 60px;
+  animation: snow 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes snow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+h2 {
+  color: var(--color-white);
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+.fa-snowflake {
+  color: var(--color-ice-blue);
+  font-size: 2rem;
+}
+
+.calendar-wrapper {
+  background-color: var(--color-ice-blue);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+.calendar-box {
+  background-color: var(--color-dark-navy);
+  border: 2px solid var(--color-soft-gray);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Front and back faces of the card */
+.calendar-box-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.calendar-box-front {
+  background-color: var(--color-dark-navy);
+  transform: rotateY(0deg);
+}
+
+.calendar-box-back {
+  background-color: var(--color-medium-blue);
+  transform: rotateY(180deg);
+  border: 2px solid var(--color-ice-blue);
+}
+
+/* Opened state */
+.calendar-box.opened .calendar-box-front {
+  transform: rotateY(-180deg);
+}
+
+.calendar-box.opened .calendar-box-back {
+  transform: rotateY(0deg);
+}
+
+.calendar-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.calendar-box p {
+  color: var(--color-white);
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.calendar-box .number {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.calendar-box .description {
+  color: var(--color-soft-gray);
+  font-size: 0.9rem;
+}
+
+.calendar-box i {
+  color: var(--color-ice-blue);
+  font-size: 1.5rem;
+}
+
+.calendar-box.opened .large-snowflake {
+  animation: surprise-spin 1s ease-out;
+  color: var(--color-white);
+  text-shadow: 0 0 10px var(--color-ice-blue);
+  font-size: 2.5rem !important;
+  margin-bottom: 1rem;
+}
+
+@keyframes surprise-spin {
+  0% {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.reset-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 1rem 0 0; /* Changed from 2rem to 1rem to match grid gap */
+  padding: 1rem;
+  background-color: var(--color-dark-navy);
+  color: var(--color-soft-gray);
+  border: 2px solid var(--color-ice-blue);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.reset-button:hover {
+  background-color: var(--color-medium-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
