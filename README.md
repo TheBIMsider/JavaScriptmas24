@@ -9,4 +9,4 @@ I love doing these challenges, but I never seem to have enough time to keep my H
 
 **Challenges**   
 Day 1:  
-Day 2: [Ugly Advent Calendar]([https://thebimsider.github.io/JavaScriptmas24/Day2)  (Claude)   
+Day 2: [Ugly Advent Calendar](https://thebimsider.github.io/JavaScriptmas24/Day2)  (Claude)   
