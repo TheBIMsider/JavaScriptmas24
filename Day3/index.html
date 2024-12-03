@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Santa's Emoji Hack 3000</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎅 Santa's Emoji Hack 3000 🎅</h1>
+      <p>
+        Type your holiday message here, and Santa's Emoji Hack 3000 will make
+        sure any emojis deemed naughty will become festive instead!
+      </p>
+      <input
+        type="text"
+        id="emojiInput"
+        placeholder="Type your message here..."
+      />
+      <div id="output">Your converted message will appear here</div>
+      <button id="showMappingBtn" class="mapping-btn">
+        Show Emoji Mappings
+      </button>
+      <div id="emojiMapping" class="emoji-mapping hidden">
+        <h3>Emoji Mappings:</h3>
+        <div class="mapping-grid"></div>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
