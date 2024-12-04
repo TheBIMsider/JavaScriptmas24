@@ -65,4 +65,10 @@ export const films = [
     ariaLabel: 'monster, water, chicken leg, clock, moon',
     id: '11',
   },
+  {
+    title: 'A Christmas Story',
+    emoji: ['🎄', '📖', '🦵', '🎅', '🔫'],
+    ariaLabel: 'Christmas tree, book, leg, Santa, gun',
+    id: '12',
+  },
 ];
