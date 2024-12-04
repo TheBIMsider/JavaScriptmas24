@@ -11,3 +11,4 @@ I love doing these challenges, but I never seem to have enough time to keep my H
 Day 1: [Grandpa's Gift List](https://thebimsider.github.io/JavaScriptmas24/Day1) (Claude) Day 1 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~07tn)  
 Day 2: [Ugly Advent Calendar](https://thebimsider.github.io/JavaScriptmas24/Day2) (Claude) Day 2 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~02cq)  
 Day 3: [Santa's Emoji Hack](https://thebimsider.github.io/JavaScriptmas24/Day3) (Claude) Day 3 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~02zu)  
+Day 4: [Christmas Movie Emoji Quiz](https://thebimsider.github.io/JavaScriptmas24/Day4) (Claude) Day 4 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06em)  
