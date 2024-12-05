@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find The Anagrams</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Add candy cane elements for background animation -->
+    <div class="candy-cane"></div>
+    <div class="candy-cane"></div>
+    <div class="candy-cane"></div>
+    <div class="candy-cane"></div>
+    <div class="candy-cane"></div>
+    <div class="candy-cane"></div>
+    <div class="candy-cane"></div>
+    <div class="candy-cane"></div>
+
+    <div class="container">
+      <div class="game-card">
+        <h1>Christmas Anagram Game</h1>
+        <button id="help-btn" class="btn btn-help">Need Help?</button>
+        <p id="tip" class="tip hidden">
+          Tip: An anagram is a word or phrase formed by rearranging the letters
+          of another word or phrase. For example, "LISTEN" is an anagram of
+          "SILENT".
+        </p>
+
+        <div id="game-content">
+          <div id="question-section">
+            <p class="instruction">Are these anagrams?</p>
+            <div class="word-pair">
+              <p id="word1" class="word"></p>
+              <p id="word2" class="word"></p>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button id="yes-btn" class="btn btn-yes">Yes</button>
+            <button id="no-btn" class="btn btn-no">No</button>
+          </div>
+
+          <div id="feedback" class="feedback hidden"></div>
+
+          <div class="stats">
+            <p>
+              Score: <span id="score">0</span> / <span id="attempts">0</span>
+            </p>
+            <p>
+              Question <span id="current-question">1</span> of
+              <span id="total-questions">10</span>
+            </p>
+          </div>
+        </div>
+
+        <div id="game-over" class="hidden">
+          <h2>Game Over!</h2>
+          <p>Final Score: <span id="final-score">0</span> out of 10</p>
+          <button id="play-again" class="btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
