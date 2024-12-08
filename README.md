@@ -15,3 +15,4 @@ Day 4: [Christmas Movie Emoji Quiz](https://thebimsider.github.io/JavaScriptmas2
 Day 5: [Find The Anagrams](https://thebimsider.github.io/JavaScriptmas24/Day5) Day 5 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~05yl)   
 Day 6: [Snow Globe Animation](https://thebimsider.github.io/JavaScriptmas24/Day6) Day 6 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0zwt)   
 Day 7: [SaaS Landing Page: GiftChain](https://thebimsider.github.io/JavaScriptmas24/Day7) Day 7 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0xro)   
+Day 8: [SaaS Landing Page: GiftChain](https://thebimsider.github.io/JavaScriptmas24/Day8) Day 8 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~03eh)   
