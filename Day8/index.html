@@ -6,7 +6,28 @@
   </head>
   <body>
     <main>
-      <h1 class="game-title">Melting Snowman Word Game</h1>
+      <div class="header">
+        <h1 class="game-title">Melting Snowman Word Game</h1>
+        <button class="help-btn" id="help-btn">?</button>
+      </div>
+
+      <!-- Help Modal -->
+      <div id="help-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>How to Play</h2>
+          <ul>
+            <li>Guess the hidden word one letter at a time</li>
+            <li>Each incorrect guess removes one part of the snowman</li>
+            <li>You have 6 guesses before the snowman melts completely</li>
+            <li>
+              If you guess the word correctly, the snowman gets sunglasses!
+            </li>
+            <li>You can play again after you win, or the snowman melts</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="snowman-container">
         <img class="sunglasses" src="images/sunglasses.png" alt="sunglasses" />
         <img

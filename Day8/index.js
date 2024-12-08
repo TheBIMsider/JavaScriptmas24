@@ -215,3 +215,23 @@ document.addEventListener('click', (event) => {
 
 // Initialize first game
 resetGame();
+
+// Help Modal functionality
+const modal = document.getElementById('help-modal');
+const helpBtn = document.getElementById('help-btn');
+const closeBtn = document.querySelector('.close');
+
+helpBtn.onclick = function () {
+  modal.style.display = 'block';
+};
+
+closeBtn.onclick = function () {
+  modal.style.display = 'none';
+};
+
+// Close modal when clicking outside
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
