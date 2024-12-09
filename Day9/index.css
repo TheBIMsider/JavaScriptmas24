@@ -1,0 +1,193 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #8b0000;
+}
+
+.recipe-card {
+  border: 1px solid #ff6347;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(139, 0, 0, 0.1);
+}
+
+.recipe-card.suitable {
+  background-color: #ffffff;
+  border-color: #32cd32;
+  border-width: 2px;
+}
+
+.recipe-preferences {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .recipe-preferences {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.preference-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid;
+}
+
+.preference-card.loves {
+  background-color: #ffffff;
+  border-color: #32cd32;
+  color: #32cd32;
+}
+
+.preference-card.dislikes {
+  background-color: #ffffff;
+  border-color: #ff6347;
+  color: #ff6347;
+}
+
+.summary-card {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  border: 2px solid #ffd700;
+  box-shadow: 0 2px 4px rgba(139, 0, 0, 0.1);
+}
+
+.ingredient-list {
+  color: #8b0000;
+  font-size: 0.875rem;
+}
+
+button {
+  background-color: #ffffff;
+  border: 2px solid;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #8b0000;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(139, 0, 0, 0.2);
+}
+
+.recipe-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #8b0000;
+}
+
+/* Override Tailwind classes with our theme colors */
+.text-blue-600 {
+  color: #8b0000 !important;
+  text-decoration: none !important;
+}
+
+/* Style for the "Pick Different Guest" button */
+.text-blue-600.underline {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+}
+
+.text-blue-600.underline:hover {
+  background-color: #ffd700;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(139, 0, 0, 0.2);
+}
+
+.bg-blue-50 {
+  background-color: #ffffff !important;
+  border-color: #ffd700 !important;
+  color: #8b0000 !important;
+}
+
+.hover\:bg-blue-100:hover {
+  background-color: #ffd700 !important;
+  color: #8b0000 !important;
+}
+
+.bg-yellow-50 {
+  background-color: #ffffff !important;
+  border: 2px solid #ffd700;
+}
+
+.hover\:bg-yellow-100:hover {
+  background-color: #ffd700 !important;
+}
+
+.text-yellow-800 {
+  color: #8b0000 !important;
+}
+
+.bg-gray-100 {
+  background-color: #ffffff !important;
+  border: 2px solid #ff6347;
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: #ff6347 !important;
+  color: #ffffff !important;
+}
+
+/* Headers styling */
+h1,
+h2,
+h3 {
+  color: #8b0000;
+}
+
+h1 {
+  text-shadow: 1px 1px 2px rgba(139, 0, 0, 0.1);
+}
+
+.text-gray-500 {
+  color: #8b0000 !important;
+  opacity: 0.7;
+}
+
+/* Main container styling */
+.max-w-4xl {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(139, 0, 0, 0.1);
+  border-radius: 1rem;
+  border: 2px solid #ffd700;
+}
+
+/* Grandma image styling */
+.grandma-image {
+  width: 100%; /* Make container full width */
+  padding: 20px;
+}
+
+.grandma-image img {
+  width: 100%; /* Make image fill container */
+  height: auto;
+  border: 3px solid #ffd700;
+  box-shadow: 0 4px 8px rgba(139, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+/* Emoji and icons */
+.recipe-title:not(.suitable) .emoji {
+  color: #ff6347;
+}
+
+.recipe-title.suitable .emoji {
+  color: #32cd32;
+}
