@@ -17,3 +17,4 @@ Day 6: [Snow Globe Animation](https://thebimsider.github.io/JavaScriptmas24/Day6
 Day 7: [SaaS Landing Page: GiftChain](https://thebimsider.github.io/JavaScriptmas24/Day7) Day 7 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0xro)   
 Day 8: [Seasonal Hangman](https://thebimsider.github.io/JavaScriptmas24/Day8) Day 8 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~03eh)   
 Day 9: [Grandma's Recipe Helper](https://thebimsider.github.io/JavaScriptmas24/Day9) Day 9 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~07pj)   
+Day 10: [Christmas Flag](https://thebimsider.github.io/JavaScriptmas24/Day10) Day 10 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0654)   
