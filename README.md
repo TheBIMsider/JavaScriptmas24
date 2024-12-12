@@ -19,4 +19,5 @@ Day 8: [Seasonal Hangman](https://thebimsider.github.io/JavaScriptmas24/Day8) Da
 Day 9: [Grandma's Recipe Helper](https://thebimsider.github.io/JavaScriptmas24/Day9) Day 9 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~07pj)   
 Day 10: [Christmas Flag](https://thebimsider.github.io/JavaScriptmas24/Day10) Day 10 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0654)   
 Day 11: [Christmas Matching Game](https://thebimsider.github.io/JavaScriptmas24/Day11) Day 11 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0yod)   
-Day 12: [Hack Santa's Merch Store](https://thebimsider.github.io/JavaScriptmas24/Day12hack) Day 12 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06y) - Ethiical Hacking challenge "Hacked" version
+Day 12: [Hack Santa's Merch Store](https://thebimsider.github.io/JavaScriptmas24/Day12hack) Day 12 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06y) - Ethical Hacking Challenge "Hacked" Version.
+Day 12: [Hack Santa's Merch Store](https://thebimsider.github.io/JavaScriptmas24/Day12hack) Day 12 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06y) - Ethical Hacking Challenge "Hacked" Version.
