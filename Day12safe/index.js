@@ -31,6 +31,7 @@ Log out the credit card details.
 const SecureStore = (function () {
   // Private variables
   let isInitialized = false;
+  let currentRating = 0;
 
   // Secure the sensitive data
   Object.defineProperty(window, 'ccData', {
@@ -77,6 +78,60 @@ const SecureStore = (function () {
     console.log('Processing payment securely...');
   }
 
+  // Sanitize user input to prevent XSS
+  function _sanitizeInput(input) {
+    if (typeof input !== 'string') return '';
+    return input
+      .replace(/[<>]/g, '') // Remove < and >
+      .trim();
+  }
+
+  // Handle star rating
+  function _setRating(rating) {
+    currentRating = rating;
+    const hiddenRatingInput = document.getElementById('hidden-rating');
+    if (hiddenRatingInput) {
+      hiddenRatingInput.value = rating;
+    }
+
+    // Update star appearance
+    const stars = document.querySelectorAll('.stars li');
+    stars.forEach((star, index) => {
+      star.setAttribute('aria-checked', index < rating ? 'true' : 'false');
+      star.tabIndex = index + 1 === rating ? 0 : -1;
+    });
+  }
+
+  // Handle review submission
+  function _handleReview(event) {
+    event.preventDefault();
+
+    const rating = document.getElementById('hidden-rating').value;
+    const reviewText = document.getElementById('text-area').value;
+
+    if (!rating || !reviewText) return;
+
+    const sanitizedReview = _sanitizeInput(reviewText);
+    const safeRating = Math.min(Math.max(parseInt(rating, 10), 1), 5);
+
+    // Create stars display
+    let stars = [];
+    for (let i = 0; i < safeRating; i++) {
+      stars.push('<span class="review-star">★</span>');
+    }
+
+    const reviewContainer = document.getElementById('text-output');
+    if (reviewContainer) {
+      const reviewElement = document.createElement('p');
+      reviewElement.innerHTML = `${stars.join('')} ${sanitizedReview}`;
+      reviewContainer.appendChild(reviewElement);
+    }
+
+    // Clear the textarea
+    document.getElementById('text-area').value = '';
+    _setRating(0); // Reset rating
+  }
+
   function _setupSecureHandlers() {
     if (isInitialized) return;
 
@@ -90,19 +145,16 @@ const SecureStore = (function () {
     // Secure the buy button
     const buyButton = document.getElementById('prod-buy');
     if (buyButton) {
-      // Create protective wrapper for click handler
       const secureClickHandler = (e) => {
         if (e.target.id === 'prod-buy') {
           _processPayment();
         }
       };
 
-      // Remove any existing handlers and add secure one
       buyButton.replaceWith(buyButton.cloneNode(true));
       const newBuyButton = document.getElementById('prod-buy');
       newBuyButton.addEventListener('click', secureClickHandler);
 
-      // Prevent further modifications
       Object.defineProperty(newBuyButton, 'onclick', {
         configurable: false,
         get: function () {
@@ -112,6 +164,23 @@ const SecureStore = (function () {
           return secureClickHandler;
         },
       });
+    }
+
+    // Set up star rating functionality
+    const stars = document.querySelectorAll('.stars li');
+    stars.forEach((star, index) => {
+      star.addEventListener('click', () => _setRating(index + 1));
+      star.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          _setRating(index + 1);
+        }
+      });
+    });
+
+    // Set up review form
+    const reviewForm = document.querySelector('.prod-form');
+    if (reviewForm) {
+      reviewForm.addEventListener('submit', _handleReview);
     }
 
     isInitialized = true;
