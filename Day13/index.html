@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Santa's Change</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Santa's Change Calculator</h1>
+        <button id="helpButton" class="help-button">❓ Help</button>
+      </div>
+      <div class="calculator">
+        <div class="input-section">
+          <input
+            type="text"
+            id="paymentInput"
+            placeholder="Enter payments (e.g., 5,10,20)"
+          />
+          <button onclick="checkPayments()">Check Payments</button>
+        </div>
+        <!-- This is the line we're updating -->
+        <div id="result" class="result">Santa's results will appear here</div>
+        <div id="animationContainer"></div>
+      </div>
+      <div class="test-cases">
+        <h2>Test Cases</h2>
+        <div class="button-container">
+          <button onclick="runTestCase1()">Test Case 1 (Should Pass)</button>
+          <button onclick="runTestCase2()">Test Case 2 (Should Fail)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>How It Works</h2>
+        <div class="modal-body">
+          <p>
+            Santa is charging $5 per delivery this year! Here's how to use the
+            calculator:
+          </p>
+          <ul>
+            <li>Enter payment amounts separated by commas (e.g., 5,10,20)</li>
+            <li>Santa only accepts $5, $10, and $20 bills</li>
+            <li>
+              The calculator will check if Santa can give correct change to
+              everyone
+            </li>
+            <li>A happy present means everyone got their change!</li>
+            <li>A sad present means someone didn't get correct change</li>
+          </ul>
+          <p>Try the test cases to see examples!</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
