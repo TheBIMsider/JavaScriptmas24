@@ -126,15 +126,15 @@ function checkPayments() {
 document.addEventListener('DOMContentLoaded', () => {
   // Get the input and button elements
   const input = document.getElementById('paymentInput');
-  const button = document.querySelector('button');
+  const checkButton = document.querySelector('.input-section button');
 
   // Get modal elements
   const modal = document.getElementById('helpModal');
   const helpBtn = document.getElementById('helpButton');
   const closeBtn = document.querySelector('.close-button');
 
-  // Add click event listener to the button
-  button.addEventListener('click', checkPayments);
+  // Add click event listener to the check payments button
+  checkButton.addEventListener('click', checkPayments);
 
   // Add keypress event listener to the input field
   input.addEventListener('keypress', (event) => {
