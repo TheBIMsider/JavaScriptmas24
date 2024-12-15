@@ -23,4 +23,5 @@ Day 12a: [Hack Santa's Merch Store](https://thebimsider.github.io/JavaScriptmas2
 Day 12b: [Hack Santa's Merch Store](https://thebimsider.github.io/JavaScriptmas24/Day12safe) Day 12 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06y) - Ethical Hacking Challenge "Safe" Version (above hack wont' work on this version).   
 Day 13: [Santa's Change Challenge](https://thebimsider.github.io/JavaScriptmas24/Day13) Day 13 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06mj)   
 Day 14: [Northagram](https://thebimsider.github.io/JavaScriptmas24/Day14) Day 14 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~04dt)   
+Day 15: [Jingle Bills](https://thebimsider.github.io/JavaScriptmas24/Day15) Day 15 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0yl5)   
 
