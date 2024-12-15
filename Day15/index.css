@@ -1,0 +1,299 @@
+:root {
+  --green: #024f1a;
+  --red: #ff0000;
+  --light-grey: rgba(211, 211, 211, 0.5);
+  --dark-grey: #333333;
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: 'Arial', sans-serif;
+  color: var(--dark-grey);
+}
+
+.hero-section {
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Book Cover Styles */
+.book-cover {
+  position: relative;
+  background-color: rgba(211, 211, 211, 0);
+  border: 6px solid white;
+  border-radius: 4px;
+  padding: 0;
+  width: 600px;
+  height: 850px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-cover:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Add this new style for the container */
+.book-cover-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  background-color: var(--green); /* Add this line */
+}
+
+.book-top {
+  background-color: var(--green);
+  color: white;
+  position: relative;
+  height: 65%;
+  display: flex;
+}
+
+/* Add image handling properties */
+.santa-image-container {
+  position: absolute;
+  left: -2rem;
+  top: 6rem;
+  width: 60%;
+  z-index: 1;
+  height: 95%; /* Add this for full-height Santa */
+}
+
+.book-top-content {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 50%;
+}
+
+.book-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.book-subtitle {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  padding-bottom: 10%;
+}
+
+.book-middle {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.book-bottom {
+  background-color: var(--green);
+  height: 10%;
+  position: relative;
+  z-index: 0; /* Lower z-index to show Santa behind */
+}
+
+.author-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-grey);
+  font-family: 'Times New Roman', serif;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  position: relative; /* Added position */
+  z-index: 3; /* Added z-index */
+}
+
+.previous-work {
+  font-size: 1.2rem;
+  color: var(--dark-grey);
+  line-height: 1.5;
+  position: relative; /* Added position */
+  z-index: 3; /* Added z-index */
+}
+
+/* Landing Page Styles */
+.landing-title {
+  color: var(--dark-grey);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.landing-subtitle {
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: 600;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.cta-button {
+  background-color: var(--red);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+
+/* Pre-order Section Styles */
+.preorder-box {
+  border: 2px solid var(--red);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preorder-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+#preorder button,
+.preorder-button,
+.read-sample-button {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--green); /* Add green border */
+}
+
+#preorder button::after,
+.preorder-button::after,
+.read-sample-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  transition: left 0.5s;
+}
+
+#preorder button:hover::after,
+.preorder-button:hover::after,
+.read-sample-button:hover::after {
+  left: 100%;
+}
+
+@media (max-width: 768px) {
+  .preorder-box {
+    margin: 0 1rem;
+  }
+
+  #preorder button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Sample Section Styles */
+.sample-section {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.sample-content {
+  background-color: #f9f9f9;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sample-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sample-content h4 {
+  color: var(--green);
+}
+
+.sample-content p {
+  color: var(--dark-grey);
+}
+
+.sample-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.sample-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .hero-section .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-cover {
+    width: 320px;
+    height: 464px;
+  }
+
+  .book-title {
+    font-size: 2.5rem;
+  }
+
+  .book-subtitle {
+    font-size: 1rem;
+  }
+
+  .author-name {
+    font-size: 2rem;
+  }
+
+  .landing-title {
+    font-size: 2.5rem;
+  }
+
+  .landing-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-cover {
+    width: 280px;
+    height: 406px;
+  }
+
+  .book-title {
+    font-size: 2rem;
+  }
+
+  .book-top-content {
+    margin-left: 50%;
+  }
+}
