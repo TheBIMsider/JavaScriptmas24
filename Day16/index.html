@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Find the Naughty Elf</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Santa's Workshop Toy Tracker</h1>
+        <button id="helpButton" class="help-button">
+          <i class="fas fa-question-circle"></i>
+        </button>
+      </div>
+
+      <!-- Help Modal -->
+      <div id="helpModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>How to Use the Toy Tracker</h2>
+          <div class="help-content">
+            <p><strong>Welcome Santa!</strong></p>
+            <p>
+              This tool helps you track and identify any discrepancies between
+              toys made and toys shipped by your elves.
+            </p>
+            <h3>Features:</h3>
+            <ul>
+              <li>View each elf's toy production numbers</li>
+              <li>
+                Click "Check for Naughty Elves" to compare toys made vs shipped
+              </li>
+              <li>
+                Red border and "NAUGHTY" banner will appear for elves with
+                missing toys
+              </li>
+              <li>
+                Detailed breakdown of shipped toys will appear under each elf
+              </li>
+            </ul>
+            <p>
+              <strong>How it works:</strong> The system recursively checks all
+              regional warehouses and shipping locations to ensure no toys are
+              unaccounted for.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="elfGrid" class="elf-grid"></div>
+      <button id="checkButton" class="check-button">
+        Check for Naughty Elves
+      </button>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
