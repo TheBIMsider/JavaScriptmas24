@@ -25,4 +25,5 @@ Day 13: [Santa's Change Challenge](https://thebimsider.github.io/JavaScriptmas24
 Day 14: [Northagram](https://thebimsider.github.io/JavaScriptmas24/Day14) Day 14 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~04dt)   
 Day 15: [Jingle Bills](https://thebimsider.github.io/JavaScriptmas24/Day15) Day 15 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0yl5)   
 Day 16: [Find the Naughty Elf](https://thebimsider.github.io/JavaScriptmas24/Day16) Day 16 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~02eo)   
+Day 17a: [Find the Naughty Elf](https://thebimsider.github.io/JavaScriptmas24/Day17before) Day 17 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0zlm)   
 
