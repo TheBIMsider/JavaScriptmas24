@@ -20,10 +20,10 @@ Day 9: [Grandma's Recipe Helper](https://thebimsider.github.io/JavaScriptmas24/D
 Day 10: [Christmas Flag](https://thebimsider.github.io/JavaScriptmas24/Day10) Day 10 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0654)   
 Day 11: [Christmas Matching Game](https://thebimsider.github.io/JavaScriptmas24/Day11) Day 11 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0yod)   
 Day 12a: [Hack Santa's Merch Store](https://thebimsider.github.io/JavaScriptmas24/Day12hack) Day 12 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06y) - Ethical Hacking Challenge "Hacked" Version.   
-Day 12b: [Hack Santa's Merch Store](https://thebimsider.github.io/JavaScriptmas24/Day12safe) Day 12 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06y) - Ethical Hacking Challenge "Safe" Version (above hack wont' work on this version).   
+Day 12b: [Hack Santa's Merch Store](https://thebimsider.github.io/JavaScriptmas24/Day12safe) Day 12 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06y) - Ethical Hacking Challenge "Safe" Version (the hack won't work on this version).     
 Day 13: [Santa's Change Challenge](https://thebimsider.github.io/JavaScriptmas24/Day13) Day 13 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~06mj)   
 Day 14: [Northagram](https://thebimsider.github.io/JavaScriptmas24/Day14) Day 14 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~04dt)   
 Day 15: [Jingle Bills](https://thebimsider.github.io/JavaScriptmas24/Day15) Day 15 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0yl5)   
 Day 16: [Find the Naughty Elf](https://thebimsider.github.io/JavaScriptmas24/Day16) Day 16 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~02eo)   
-Day 17a: [Santa Needs You!](https://thebimsider.github.io/JavaScriptmas24/Day17before) Day 17 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0zlm) - Orginal site code, not very accessibile.   
+Day 17a: [Santa Needs You!](https://thebimsider.github.io/JavaScriptmas24/Day17before) Day 17 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0zlm) - Original site code, not very accessible.   
 Day 17b: [Santa Needs You!](https://thebimsider.github.io/JavaScriptmas24/Day17before) Day 17 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0zlm) - Updated site code with accessibility features implemented.  
