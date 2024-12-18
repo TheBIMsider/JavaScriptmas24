@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Christmas Budget Analyser 3000</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎄Christmas Budget Analyser 3000 🎁</h1>
+
+      <div class="header-controls">
+        <button id="help-button" class="help-button">❓ Help</button>
+      </div>
+
+      <div class="budget-section">
+        <h2>Christmas Budget</h2>
+        <div class="form-row">
+          <input
+            type="number"
+            id="budget-input"
+            placeholder="Enter Budget"
+            step="0.01"
+            min="0"
+            value="600.00"
+          />
+          <button id="set-budget">Set Budget</button>
+        </div>
+        <div class="progress-bar">
+          <div id="budget-progress" class="progress-fill"></div>
+        </div>
+        <div class="budget-status">
+          <span id="budget-amount">Budget: $600.00</span>
+          <span id="budget-remaining"></span>
+        </div>
+        <div id="budget-message"></div>
+      </div>
+
+      <div class="controls">
+        <select id="filter-select">
+          <option value="all">Show All Items</option>
+          <option value="gifts">Show Christmas Gifts</option>
+          <option value="regular">Show Regular Items</option>
+        </select>
+      </div>
+
+      <div class="list-container">
+        <div id="items-list"></div>
+        <div id="total" class="total"></div>
+      </div>
+
+      <div class="add-item-form">
+        <h2>Add New Item</h2>
+        <form id="add-item-form">
+          <div class="form-row">
+            <input
+              type="text"
+              id="item-name"
+              placeholder="Item Name"
+              required
+            />
+            <input
+              type="number"
+              id="item-price"
+              placeholder="Price"
+              step="0.01"
+              min="0"
+              required
+            />
+            <label class="checkbox-label">
+              <input type="checkbox" id="is-gift" />
+              Is Christmas Gift?
+            </label>
+            <button type="submit">Add Item</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Help Modal -->
+      <div id="help-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>How to Use the Christmas Budget Analyser 3000</h2>
+          <ul>
+            <li>Set your Christmas budget using the budget input at the top</li>
+            <li>
+              View your current shopping list and filter between all items,
+              Christmas gifts, or regular items
+            </li>
+            <li>
+              Track your spending with the progress bar - it will warn you if
+              you go over budget
+            </li>
+            <li>Add new items using the form at the bottom</li>
+            <li>
+              Christmas gifts are highlighted in pink and marked with a 🎁
+            </li>
+            <li>Regular shopping items are marked with a 🛍️</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
