@@ -27,3 +27,4 @@ Day 15: [Jingle Bills](https://thebimsider.github.io/JavaScriptmas24/Day15) Day 
 Day 16: [Find the Naughty Elf](https://thebimsider.github.io/JavaScriptmas24/Day16) Day 16 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~02eo)   
 Day 17a: [Santa Needs You!](https://thebimsider.github.io/JavaScriptmas24/Day17before) Day 17 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0zlm) - Original site code, not very accessible.   
 Day 17b: [Santa Needs You!](https://thebimsider.github.io/JavaScriptmas24/Day17after) Day 17 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0zlm) - Updated site code with accessibility features implemented.  
+Day 18: [The Cost of Christmas](https://thebimsider.github.io/JavaScriptmas24/Day18) Day 18 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~02he?)   
