@@ -16,11 +16,11 @@ Expected output: 559.93
 
 - Use the reduce() method to complete this challenge.
 */
+
 import shoppingCartData from './data.js';
 
-// Create a mutable copy of the shopping data
 let currentItems = [...shoppingCartData];
-let currentBudget = 600.0; // Default budget
+let currentBudget = 600.0;
 
 function calculateCost(items) {
   return items.reduce((total, item) => total + item.price, 0).toFixed(2);
@@ -39,11 +39,9 @@ function updateBudgetDisplay(giftTotal) {
   budgetAmount.textContent = `Budget: $${currentBudget.toFixed(2)}`;
   budgetRemaining.textContent = `Remaining: $${remaining.toFixed(2)}`;
 
-  // Update progress bar
   budgetProgress.style.width = `${Math.min(percentUsed, 100)}%`;
   budgetProgress.classList.toggle('warning', percentUsed > 100);
 
-  // Update message
   if (remaining < 0) {
     budgetMessage.className = 'budget-warning';
     budgetMessage.textContent = `⚠️ Over budget by $${Math.abs(
@@ -51,7 +49,7 @@ function updateBudgetDisplay(giftTotal) {
     ).toFixed(2)}!`;
   } else if (remaining === 0) {
     budgetMessage.className = 'budget-warning';
-    budgetMessage.textContent = `⚠️ You've reached your budget limit!`;
+    budgetMessage.textContent = `'⚠️ You've reached your budget limit!`;
   } else {
     budgetMessage.className = 'budget-ok';
     budgetMessage.textContent = `✅ Within budget`;
@@ -62,38 +60,83 @@ function displayItems(filter = 'all') {
   const itemsList = document.getElementById('items-list');
   const totalElement = document.getElementById('total');
 
-  // Clear current display
   itemsList.innerHTML = '';
 
-  // Filter items based on selection
-  let itemsToDisplay = currentItems;
+  // Create the filtered display array but keep original indices
+  let itemsToDisplay = currentItems.map((item, index) => ({
+    ...item,
+    originalIndex: index,
+  }));
+
   if (filter === 'gifts') {
-    itemsToDisplay = currentItems.filter((item) => item.isGift);
+    itemsToDisplay = itemsToDisplay.filter((item) => item.isGift);
   } else if (filter === 'regular') {
-    itemsToDisplay = currentItems.filter((item) => !item.isGift);
+    itemsToDisplay = itemsToDisplay.filter((item) => !item.isGift);
   }
 
-  // Display filtered items
   itemsToDisplay.forEach((item) => {
     const itemElement = document.createElement('div');
     itemElement.className = `item ${item.isGift ? 'gift' : ''}`;
     itemElement.innerHTML = `
-            <span>${item.item} ${item.isGift ? '🎁' : '🛍️'}</span>
-            <span>$${item.price.toFixed(2)}</span>
+            <div class="item-main">
+                <span>${item.item} ${item.isGift ? '🎁' : '🛍️'}</span>
+                <span>$${item.price.toFixed(2)}</span>
+            </div>
+            <div class="item-controls">
+                <button class="toggle-gift" data-index="${item.originalIndex}">
+                    ${item.isGift ? 'Make Regular' : 'Make Gift'}
+                </button>
+                <button class="remove-item" data-index="${
+                  item.originalIndex
+                }">🗑️</button>
+            </div>
         `;
     itemsList.appendChild(itemElement);
   });
 
-  // Update total
+  // Remove old event listeners
+  document.querySelectorAll('.toggle-gift').forEach((button) => {
+    button.replaceWith(button.cloneNode(true));
+  });
+  document.querySelectorAll('.remove-item').forEach((button) => {
+    button.replaceWith(button.cloneNode(true));
+  });
+
+  // Add new event listeners
+  document.querySelectorAll('.toggle-gift').forEach((button) => {
+    button.addEventListener('click', toggleGiftStatus);
+  });
+  document.querySelectorAll('.remove-item').forEach((button) => {
+    button.addEventListener('click', removeItem);
+  });
+
   const total = calculateCost(itemsToDisplay);
   totalElement.textContent = `Total: $${total}`;
 
-  // Update budget display with gift total
   const giftTotal = calculateCost(currentItems.filter((item) => item.isGift));
   updateBudgetDisplay(giftTotal);
 }
 
-// Add new item
+function toggleGiftStatus(e) {
+  const index = parseInt(e.target.dataset.index);
+  const currentFilter = document.getElementById('filter-select').value;
+
+  if (index >= 0 && index < currentItems.length) {
+    currentItems[index].isGift = !currentItems[index].isGift;
+    displayItems(currentFilter);
+  }
+}
+
+function removeItem(e) {
+  const index = parseInt(e.target.dataset.index);
+  const currentFilter = document.getElementById('filter-select').value;
+
+  if (index >= 0 && index < currentItems.length) {
+    currentItems.splice(index, 1);
+    displayItems(currentFilter);
+  }
+}
+
 function addItem(e) {
   e.preventDefault();
 
@@ -104,23 +147,19 @@ function addItem(e) {
   };
 
   currentItems.push(newItem);
-
-  // Reset form
   e.target.reset();
 
-  // Refresh display with current filter
   const currentFilter = document.getElementById('filter-select').value;
   displayItems(currentFilter);
 }
 
-// Set up event listeners
+// Event Listeners
 document.getElementById('filter-select').addEventListener('change', (e) => {
   displayItems(e.target.value);
 });
 
 document.getElementById('add-item-form').addEventListener('submit', addItem);
 
-// Add budget setting functionality
 document.getElementById('set-budget').addEventListener('click', () => {
   const budgetInput = document.getElementById('budget-input');
   const newBudget = parseFloat(budgetInput.value);
