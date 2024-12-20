@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elf Name Generator</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Miltonian+Tattoo&family=Spicy+Rice&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <button class="help-button" id="help-button">?</button>
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="help-modal" id="help-modal">
+      <button class="close-modal" id="close-modal">×</button>
+      <h2>How it Works</h2>
+      <p>Welcome to the Santa's Workshop Elf-ID Maker! Here's how to use it:</p>
+      <ol>
+        <li>Enter your first and last name (required)</li>
+        <li>Optionally add a middle name for an extra magical touch</li>
+        <li>Click "Generate Elf Name" to receive your unique elf identity</li>
+      </ol>
+      <p>Each generated name:</p>
+      <ul>
+        <li>Matches your initials</li>
+        <li>Is unique to you</li>
+        <li>Gets added to the "Registered Employees" list</li>
+      </ul>
+      <p>
+        Perfect for holiday events, Secret Santa, or bringing some Christmas
+        cheer to the workplace!
+      </p>
+    </div>
+
+    <h1>
+      🎅 Santa's Workshop 🏭<br />
+      🧝 Elf-ID Maker 🤖
+    </h1>
+    <main>
+      <div class="generator-section">
+        <form id="form" class="form">
+          <div class="name-row">
+            <div>
+              <span class="label-text">Human First Name</span>
+              <input type="text" name="first-name" placeholder="John" />
+            </div>
+
+            <div>
+              <span class="label-text">Human Last Name</span>
+              <input type="text" name="last-name" placeholder="Doe" />
+            </div>
+          </div>
+
+          <div class="middle-row">
+            <span class="label-text">Human Middle Name</span>
+            <input
+              type="text"
+              name="middle-name"
+              placeholder="Middle name (optional)"
+            />
+          </div>
+        </form>
+        <h2 id="elf-name-display">Sparkle Twinkles</h2>
+        <button id="generate-btn" class="generate-btn">Generate Elf-ID</button>
+      </div>
+      <hr />
+      <div class="registered-employees-section">
+        <h2>Registered Employees:</h2>
+        <ol class="elf-names-list" id="elf-names-list">
+          <li>Seems empty...</li>
+        </ol>
+      </div>
+    </main>
+    <footer>© 2024 Santa Software LLC. All Rights Reserved.</footer>
+  </body>
+</html>
