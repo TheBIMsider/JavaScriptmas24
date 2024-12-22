@@ -30,3 +30,5 @@ Day 17b: [Santa Needs You!](https://thebimsider.github.io/JavaScriptmas24/Day17a
 Day 18: [The Cost of Christmas](https://thebimsider.github.io/JavaScriptmas24/Day18) Day 18 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~02he?)   
 Day 19: [Holiday Gift Shopping](https://thebimsider.github.io/JavaScriptmas24/Day19) Day 19 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~04fs)   
 Day 20: [Elf Name Generator](https://thebimsider.github.io/JavaScriptmas24/Day20) Day 20 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~07tg)   
+Day 21: [Santa's Data Analysis](https://thebimsider.github.io/JavaScriptmas24/Day21) Day 21 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~03rh)   
+
