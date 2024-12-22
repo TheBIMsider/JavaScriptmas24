@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Santa's Data Analysis</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Santa's Global Toy Analysis</h1>
+        <button id="helpBtn" class="help-button" aria-label="Help">
+          <span class="help-icon">?</span>
+        </button>
+      </header>
+
+      <div class="filters">
+        <select id="viewMode" class="filter-select">
+          <option value="global">Global Rankings</option>
+          <option value="regional">Regional Analysis</option>
+          <option value="category">By Category</option>
+        </select>
+
+        <select id="sortOrder" class="filter-select">
+          <option value="quantity">Sort by Quantity</option>
+          <option value="alphabetical">Sort Alphabetically</option>
+          <option value="category">Sort by Category</option>
+        </select>
+      </div>
+
+      <div class="dashboard">
+        <div id="statsPanel" class="stats-panel">
+          <div class="stat-card primary">
+            <h3>Most Requested</h3>
+            <div id="topToy"></div>
+          </div>
+          <div class="stat-card secondary">
+            <h3>Total Requests</h3>
+            <div id="totalRequests"></div>
+          </div>
+        </div>
+
+        <div id="mainContent" class="main-content">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>How to Use This Dashboard</h2>
+          <button id="closeModal" class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+          <section class="help-section">
+            <h3>View Modes</h3>
+            <ul>
+              <li>
+                <strong>Global Rankings:</strong> See all toys ranked by total
+                requests worldwide
+              </li>
+              <li>
+                <strong>Regional Analysis:</strong> Break down toy requests by
+                geographic location
+              </li>
+              <li>
+                <strong>By Category:</strong> Group toys by type (using emoji
+                categories)
+              </li>
+            </ul>
+          </section>
+
+          <section class="help-section">
+            <h3>Sorting Options</h3>
+            <ul>
+              <li>
+                <strong>Sort by Quantity:</strong> Order toys by number of
+                requests (highest to lowest)
+              </li>
+              <li>
+                <strong>Sort Alphabetically:</strong> Order toys by name (A to
+                Z)
+              </li>
+              <li>
+                <strong>Sort by Category:</strong> Group toys by their emoji
+                category
+              </li>
+            </ul>
+          </section>
+
+          <section class="help-section">
+            <h3>Dashboard Features</h3>
+            <ul>
+              <li>
+                <strong>Most Requested:</strong> Shows the toy with the highest
+                total requests
+              </li>
+              <li>
+                <strong>Total Requests:</strong> Displays the sum of all toy
+                requests globally
+              </li>
+              <li>
+                <strong>Interactive Cards:</strong> Hover over toy cards to
+                highlight them
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
