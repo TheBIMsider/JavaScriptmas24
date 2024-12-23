@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Christmas Label Maker</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+  </head>
+  <body>
+    <header>
+      <h1>🎄 Christmas Label Maker 🎁</h1>
+      <button id="help-btn" class="btn help no-print">Help ❔</button>
+      <div class="control-panel">
+        <select id="name-select">
+          <option value="">Select a name...</option>
+        </select>
+        <div class="list-controls">
+          <button id="toggle-list-btn" class="btn">Add/Remove from List</button>
+          <button id="print-btn" class="btn print">Print Labels</button>
+        </div>
+        <p id="message" class="message"></p>
+      </div>
+    </header>
+
+    <!-- Add Help Modal -->
+    <div id="help-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>How to Use Christmas Label Maker</h2>
+        <div class="help-content">
+          <h3>Quick Guide:</h3>
+          <ol>
+            <li>
+              <strong>Select a Contact:</strong> Choose a name from the dropdown
+              menu.
+            </li>
+            <li>
+              <strong>Manage Christmas List:</strong> Use the Add/Remove button
+              to update your Christmas list.
+            </li>
+            <li>
+              <strong>Create Labels:</strong> Labels automatically appear for
+              Christmas list members.
+            </li>
+            <li>
+              <strong>Print or Download:</strong>
+              <ul>
+                <li>Click 'Print Labels' to print all visible labels</li>
+                <li>
+                  Use the 'Download' button above each label to save individual
+                  labels
+                </li>
+              </ul>
+            </li>
+          </ol>
+
+          <div class="tips">
+            <h3>Tips:</h3>
+            <ul>
+              <li>Each label gets unique festive icons 🎄</li>
+              <li>Download individual labels as images for sharing</li>
+              <li>Print multiple labels at once</li>
+              <li>Easily manage who's on your Christmas list</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="labels-container"></main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
