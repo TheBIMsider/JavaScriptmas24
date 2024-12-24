@@ -33,4 +33,5 @@ Day 20: [Elf Name Generator](https://thebimsider.github.io/JavaScriptmas24/Day20
 Day 21: [Santa's Data Analysis](https://thebimsider.github.io/JavaScriptmas24/Day21) Day 21 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~03rh)   
 Day 22: [Christmas Label Maker](https://thebimsider.github.io/JavaScriptmas24/Day22) Day 22 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0xxi)   
 Day 23: [Santa Got Hacked!](https://thebimsider.github.io/JavaScriptmas24/Day23) Day 23 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~07tr)   
+Day 24: [A Christmas Code](https://thebimsider.github.io/JavaScriptmas24/Day24) Day 24 Challenge [HERE](https://scrimba.com/javascriptmas-c0javascriptmas/~0xxe)   
 
