@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A Christmas Code</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div class="modal" id="helpModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>How It Works</h2>
+        <div class="help-content">
+          <p>
+            This decoder converts a binary message into readable text in three
+            steps:
+          </p>
+          <ol>
+            <li>
+              <strong>Binary Message:</strong> The starting point - a sequence
+              of 1s and 0s that represent ASCII characters.
+            </li>
+            <li>
+              <strong>ASCII Characters:</strong> The binary numbers are
+              converted to their ASCII character representation.
+            </li>
+            <li>
+              <strong>Final Decoded Message:</strong> Using the provided key, we
+              substitute specific characters to reveal the hidden message.
+            </li>
+          </ol>
+          <div class="substitution-key">
+            <h3>Substitution Key:</h3>
+            <p>The key provides two sets of substitutions:</p>
+            <ul>
+              <li>
+                <code>abc = klm</code> (replace k with a, l with b, m with c)
+              </li>
+              <li>
+                <code>xyz = "#$</code> (replace " with x, # with y, $ with z)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="keyModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Decoding Key</h2>
+        <div class="key-content">
+          <p>Use these character substitutions:</p>
+          <div class="key-table">
+            <h3>First Set:</h3>
+            <ul>
+              <li>k → a</li>
+              <li>l → b</li>
+              <li>m → c</li>
+            </ul>
+            <h3>Second Set:</h3>
+            <ul>
+              <li>" → x</li>
+              <li># → y</li>
+              <li>$ → z</li>
+            </ul>
+          </div>
+          <p class="key-example">
+            Example: <code>klm</code> becomes <code>abc</code>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <h1>🎅 Christmas Code Decoder 🔐</h1>
+        <button id="helpBtn" class="icon-btn" title="Help">❔</button>
+      </div>
+
+      <div class="step-container">
+        <div id="binary" class="step active">
+          <h3>Step 1: Binary Message</h3>
+          <div class="message"></div>
+          <button id="toAscii" class="decode-btn">Convert to ASCII →</button>
+        </div>
+
+        <div id="ascii" class="step inactive">
+          <div class="step-header">
+            <h3>Step 2: ASCII Characters</h3>
+            <button id="keyBtn" class="icon-btn" title="View Key">🔑</button>
+          </div>
+          <div class="message"></div>
+          <button id="toDecode" class="decode-btn">Decode with Key →</button>
+        </div>
+
+        <div id="substituted" class="step inactive">
+          <h3>Step 3: Final Decoded Message</h3>
+          <div class="message"></div>
+          <button id="reset" class="decode-btn">← Start Over</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
